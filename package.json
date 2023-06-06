@@ -8,7 +8,9 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "lint": "eslint src --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "test:husky:pre-commit": "husky run pre-commit",
+    "postinstall": "husky install"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -25,6 +27,8 @@
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-react-refresh": "^0.4.1",
+    "eslint-plugin-tailwindcss": "^3.12.1",
+    "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "postcss": "^8.4.24",
     "prettier": "2.8.8",
