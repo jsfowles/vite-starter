@@ -13,7 +13,7 @@ const Home = () => (
           <img src="/vectorform.svg" alt="Vectorform Logo" width={90} />
         </a>
       </div>
-      <h1 className="text-4xl">Vite Starter v{version}</h1>
+      <h1 className="text-4xl">Vite Starter v</h1>
       <p>
         Get started by editing{' '}
         <code className="font-mono font-bold">src/App.tsx</code>
