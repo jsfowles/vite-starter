@@ -77,11 +77,4 @@ In this example, we define two routes: one for the home page (`/`) and one for t
 
 When you click on the links, the corresponding component (`HomePage` or `AboutPage`) will be rendered, and the URL in the address bar will be updated accordingly.
 
-And that's it! With just these basic concepts, you can start to build complex applications with multiple views using React Router DOM.
-
 Please note that this is a simplified example. The `react-router-dom` library has many more features to explore, such as dynamic routes, nested routes, redirects, route protection, and more. I recommend reading the [official React Router documentation](https://reactrouter.com/) to learn more about these advanced features.
-
-````
-
-Please note that this markdown needs to be rendered by a markdown parser (like GitHub's, GitLab's, Bitbucket's, etc.) to be properly viewed. The triple backticks (```) are used to denote code blocks, and the language immediately following the opening backticks is used for syntax highlighting in the rendered markdown.
-````

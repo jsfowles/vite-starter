@@ -1,6 +1,6 @@
 # Using Tailwind CSS with Vite
 
-This guide assumes that you have already installed Tailwind CSS and have a basic configuration set up. If not, please refer to the [official Tailwind CSS installation guide](https://tailwindcss.com/docs/installation).
+This guide assumes that we have already installed Tailwind CSS and have a basic configuration set up. If not, please refer to the [official Tailwind CSS installation guide](https://tailwindcss.com/docs/installation).
 
 ## Configuring Tailwind CSS
 
@@ -17,15 +17,15 @@ export default {
 };
 ```
 
-The `content` array should point to your HTML file and any file where you plan to use Tailwind CSS classes.
+The `content` array should point to our HTML file and any file where we plan to use Tailwind CSS classes.
 
-The `theme` object can be used to extend Tailwind's default configuration. For example, you can add new colors or modify the spacing/sizing scale.
+The `theme` object can be used to extend Tailwind's default configuration. For example, we can add new colors or modify the spacing/sizing scale.
 
-The `plugins` array can be used to add Tailwind CSS plugins to your configuration.
+The `plugins` array can be used to add Tailwind CSS plugins to our configuration.
 
-## Using Tailwind CSS in your components
+## Using Tailwind CSS in our components
 
-You can use Tailwind CSS classes directly in your JSX:
+We can use Tailwind CSS classes directly in our JSX:
 
 ```jsx
 function Component() {
@@ -35,15 +35,15 @@ function Component() {
 
 In this example, `text-center` centers the text and `text-blue-500` sets the text color to a medium shade of blue.
 
-## Building your styles
+## Building our styles
 
-When you're ready to build your project for production, Vite will automatically purge unused styles from your CSS if your `tailwind.config.js` file is properly configured. To start the build process, run:
+When we're ready to build our project for production, Vite will automatically purge unused styles from our CSS if our `tailwind.config.js` file is properly configured. To start the build process, run:
 
 ```shell
 npm run build
 ```
 
-This command will create a `dist` directory with your built project.
+This command will create a `dist` directory with our built project.
 
 ## Useful resources
 
