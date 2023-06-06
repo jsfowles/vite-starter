@@ -1,58 +1,29 @@
-# Using Husky for Git Hooks
+Certainly, here's a more detailed explanation:
 
-This guide assumes that Husky is already installed and set up in our project.
+# Understanding Husky in Our Project
 
-Husky is a tool that makes managing Git hooks easy. Git hooks are scripts that Git executes before or after events such as: `commit`, `push`, and others. They're a built-in feature of Git, but Husky provides a more convenient way to add them to our project.
+In our project, we're using Husky to enforce code quality checks before each commit.
 
-## Understanding our current Husky configuration
+## How it Works
 
-In our `package.json` file, we have a Husky configuration that looks like this:
+Husky operates by using a `pre-commit` hook, a script that Git runs automatically every time you commit your code. This script resides in the `.husky` directory at the root of your project.
 
-```json
-"husky": {
-  "hooks": {
-    "pre-commit": "lint-staged"
-  }
-}
+Here's what our `pre-commit` file looks like:
+
+```bash
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+npm run lint && npm run prettier
 ```
 
-This configuration sets up a `pre-commit` hook that will trigger the `lint-staged` command every time we run `git commit`.
+Here's a break down of this file:
 
-The `lint-staged` command is configured separately in our `package.json` file:
+1. `. "$(dirname -- "$0")/_/husky.sh"`: This line runs Husky's internal script. This is needed for Husky to function properly.
 
-```json
-"lint-staged": {
-  "*.{ts,tsx,js,jsx,json,css,md}": [
-    "prettier --write",
-    "eslint --fix",
-    "git add"
-  ]
-}
-```
+2. `npm run lint && npm run prettier`: This is where we define what happens when the hook is triggered. In our case, we're running two tasks: `lint` and `prettier`.
 
-This configuration instructs `lint-staged` to run three commands: `prettier --write`, `eslint --fix`, and `git add` on any staged files that match the given patterns (`*.{ts,tsx,js,jsx,json,css,md}`).
+   - `npm run lint`: This command runs our linter, which checks our code for potential errors and ensures we're following the coding standards we've defined for our project.
 
-## Using our current Husky configuration
+   - `npm run prettier`: This command runs Prettier, a code formatting tool. Prettier ensures that all of our code follows a consistent style, making it easier to read and maintain.
 
-With the configuration we have, Husky will automatically check and fix our code every time we make a commit. Here's a simple workflow:
-
-1. Edit our files.
-2. Stage the changes we want to commit (`git add .`).
-3. Run `git commit -m "Our commit message"`.
-
-Before the commit is created, Husky will run the `lint-staged` command, which in turn runs Prettier and ESLint on our staged files. If any issues are found that can't be automatically fixed, the commit will be aborted and we'll need to fix those issues manually.
-
-After we have fixed the issues, we can attempt to make the commit again.
-
-## Useful resources
-
-For more information on Husky and how to configure it, check out the [official Husky documentation](https://typicode.github.io/husky/#/).
-
-To learn more about how to use ESLint and Prettier, refer to their respective documentations:
-
-- [ESLint](https://eslint.org/docs/user-guide/getting-started)
-- [Prettier](https://prettier.io/docs/en/index.html)
-
-Remember, the goal of using tools like Husky, ESLint, and Prettier is to ensure code quality and consistency across our project.
-
-In this case, Husky, ESLint, and Prettier are tools that assist us in maintaining code quality and consistency, but they do not replace good programming practices and thorough code reviews.
+So, in summary, before each commit, Husky will run our linter and our formatter. If either of these tasks fails (for instance, if there's a linting error in our code), the commit will be aborted, allowing us to fix the issue before trying again.
