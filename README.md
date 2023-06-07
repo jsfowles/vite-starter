@@ -52,7 +52,7 @@ git clone git@bitbucket.org:vectorform/vf-vite-starter.git
   Run Prettier on the entire project:
 
   ```shell
-  npm run format
+  npm run prettier
   ```
 
 ## Husky Pre-commit Hook
@@ -68,6 +68,14 @@ Contributions are what make the open source community such an amazing place to l
 3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a pull request
+
+## Learn More
+
+For more information about the tools used in this project:
+
+- Learn about using [Husky](./docs/HUSKY_TUTORIAL.md) for pre-commit hooks.
+- Learn how to set up [React Router](./docs/REACT_ROUTER_SETUP.md) for page routing.
+- Learn how to configure and use [Tailwind CSS](./docs/TAILWINDCSS_TUTORIAL.md) for styling.
 
 ## License
 
