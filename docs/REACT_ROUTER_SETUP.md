@@ -28,47 +28,41 @@ import { BrowserRouter as Router, Route, Switch, Link } from 'react-router-dom';
 Next, we define some pages for our application. For this example, we'll just use simple functional components:
 
 ```jsx
-function HomePage() {
-  return <h1>Home Page</h1>;
-}
+const HomePage = () => <h1>Home Page</h1>;
 
-function AboutPage() {
-  return <h1>About Page</h1>;
-}
+const AboutPage = () => <h1>About Page</h1>;
 ```
 
 Now we can set up our routes inside the `Router` component:
 
 ```jsx
-function App() {
-  return (
-    <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
+const App = () => (
+  <Router>
+    <div>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/about">About</Link>
+          </li>
+        </ul>
+      </nav>
 
-        {/* A <Switch> looks through its children <Route>s and
+      {/* A <Switch> looks through its children <Route>s and
             renders the first one that matches the current URL. */}
-        <Switch>
-          <Route path="/about">
-            <AboutPage />
-          </Route>
-          <Route path="/">
-            <HomePage />
-          </Route>
-        </Switch>
-      </div>
-    </Router>
-  );
-}
+      <Switch>
+        <Route path="/about">
+          <AboutPage />
+        </Route>
+        <Route path="/">
+          <HomePage />
+        </Route>
+      </Switch>
+    </div>
+  </Router>
+);
 
 export default App;
 ```

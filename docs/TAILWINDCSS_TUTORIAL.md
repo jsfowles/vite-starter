@@ -28,9 +28,9 @@ The `plugins` array can be used to add Tailwind CSS plugins to our configuration
 We can use Tailwind CSS classes directly in our JSX:
 
 ```jsx
-function Component() {
-  return <div className="text-center text-blue-500">Hello, world!</div>;
-}
+const Component = () => (
+  <div className="text-center text-blue-500">Hello, world!</div>
+);
 ```
 
 In this example, `text-center` centers the text and `text-blue-500` sets the text color to a medium shade of blue.
