@@ -1,5 +1,3 @@
-Certainly, here's a more detailed explanation:
-
 # Understanding Husky in Our Project
 
 In our project, we're using Husky to enforce code quality checks before each commit.
