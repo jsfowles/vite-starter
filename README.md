@@ -1,4 +1,4 @@
-# VF Vite Starter
+# jsfowles Vite Starter
 
 A Vite starter project using React, TypeScript, and TailwindCSS. Includes ESLint and Prettier for code quality, and Husky for pre-commit hooks.
 
@@ -11,10 +11,7 @@ A Vite starter project using React, TypeScript, and TailwindCSS. Includes ESLint
 
 ### Installation
 
-1. Clone the repo
-   `shell
-git clone git@bitbucket.org:vectorform/vf-vite-starter.git
-    `
+1. Clone this repo
 
 2. Install NPM packages
    ```shell
