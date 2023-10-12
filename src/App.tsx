@@ -6,7 +6,7 @@ const Home = () => (
     <div className="z-10 flex w-full max-w-prose flex-col items-center justify-between space-y-12 font-mono">
       <h1 className="text-4xl">Vite Starter v{version}</h1>
       <p>
-        Get started by editing
+        Get started by editing {''}
         <code className="bg-gray-700 font-mono font-bold">src/App.tsx</code>
       </p>
     </div>
